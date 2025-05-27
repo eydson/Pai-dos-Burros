@@ -4,9 +4,6 @@ from discord.ext import commands
 import re
 from collections import defaultdict
 
-# TOKEN do Bot
-TOKEN = os.getenv('TOKEN')
-
 # Configure intents
 intents = discord.Intents.default()
 intents.message_content = True
@@ -88,7 +85,7 @@ async def on_command_error(ctx, error):
         print(f"Erro não tratado: {error}")
 
 # Get token from environment variable
-TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = os.getenv('TOKEN')
 
 if not TOKEN:
     print("Erro: Token do Discord não encontrado nas variáveis de ambiente!")
